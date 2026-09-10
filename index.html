@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/main.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+   <div class="container mx-5  my-5">
+     <form action="">
+        <div class="">
+            <label for="productName" class="d-block mt-3">product Name</label>
+            <input type="text" class="form-control" name="productName" id="productName">
+            <div class="alert alert-danger d-none productNameAlert">
+                <p>The name must be a vaild name that start with capital letter</p>
+            </div>
+        </div>
+        <div class="">
+            <label for="productPrice" class="d-block mt-3">product Price</label>
+            <input type="number" class="form-control" name="productPrice" id="productPrice">
+        </div>
+        <div class="">
+            <label for="productCat" class="d-block mt-3">productCat</label>
+            <input type="text" class="form-control" name="productCat" id="productCat">
+        </div>
+        <div class="">
+            <label for="productDesc" class="d-block mt-3">productDesc</label>
+            <input type="text" class="form-control" name="productDesc" id="productDesc">
+        </div>
+
+        <button type="button" onclick="addItem()" id="addBtn" class="btn my-4 bg-info d-block border-bill">Add product</button>
+
+        <input type="search" class="form-control my-3" name="search" id="search" placeholder="search...." onkeyup="searchProduct(this.value)">
+    </form>
+
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>product Name</th>
+                <th>product price</th>
+                <th>Product Cat</th>
+                <th>product Desk</th>
+                <th>Update</th>
+                <th>Delete</th>
+
+            </tr>
+        </thead>
+
+        <tbody id="bodyTable">
+            
+        </tbody>
+    </table>
+
+   </div>
+</body>
+</html>
